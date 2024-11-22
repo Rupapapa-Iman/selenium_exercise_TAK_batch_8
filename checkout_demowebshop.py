@@ -58,8 +58,8 @@ class Demowebshop(unittest.TestCase):
         mssg = browser.find_element(*obj_loct.cnfrm_lyr).text
         self.assertIn("Your order has been successfully processed!", mssg) 
         time.sleep(2)
-    #def tearDown(self):
-        #self.browser.quit()
+    def tearDown(self):
+        self.browser.quit()
 
 if __name__ == "__main__":
     unittest.main()
